@@ -4,9 +4,22 @@
 
 ---
 
-Mapbox token: Put your mapbox token in `public/vis.js`
+
 
 ## development
+
+
+### Setup
+
+- Mapbox token: Put your mapbox token in `public/vis.js`
+- Have the following project structure
+```bash
+.         
+├── kibana             
+└── kibana-extra
+    └── deck_gl
+```
+
 
 See the [kibana contributing guide](https://github.com/elastic/kibana/blob/master/CONTRIBUTING.md) for instructions setting up your development environment. Once you have completed that, use the following yarn scripts.
 
