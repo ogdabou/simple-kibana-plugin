@@ -30,13 +30,13 @@ See the [kibana contributing guide](https://github.com/elastic/kibana/blob/maste
 
     > ***IMPORTANT:*** Use this script instead of `yarn` to install dependencies when switching branches, and re-run it whenever your dependencies change.
 
-  - `yarn start`
+  - `yarn es snapshot --license oss --version 6.4.2`
+
+    Start Elasticsearch for local development
+
+  - `yarn start --oss`
 
     Start kibana and have it include this plugin. You can pass any arguments that you would normally send to `bin/kibana`
-
-      ```
-      yarn start --elasticsearch.url http://localhost:9220
-      ```
 
   - `yarn build`
 
