@@ -1,6 +1,6 @@
 # deck_gl
 
-> An awesome Kibana plugin
+> Sample Kibana Visualization plugin using full React approach & external library usage.
 
 ---
 
