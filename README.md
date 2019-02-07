@@ -18,9 +18,13 @@
 
 ```bash
 
-mkdir kibana-work
+mkdir -p kibana-work/kibana-extra
 cd kibana-work
+
 git clone git clone --depth 1 --branch v6.5.4 git@github.com:elastic/kibana.git
+
+cd kibana-extra
+git clone git@github.com:ogdabou/simple-kibana-plugin.git
 
 tree 
 .         
