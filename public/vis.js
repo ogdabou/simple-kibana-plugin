@@ -1,15 +1,15 @@
-import { Notifier } from 'ui/notify'
+import { toastNotifications } from 'ui/notify'
 import React, { Component, Fragment } from 'react'
 
 import DeckGL, { LineLayer, ScatterplotLayer } from 'deck.gl'
 import { StaticMap } from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-const notify =  new Notifier({ location: 'deck.gl' })
-const MAPBOX_ACCESS_TOKEN = null
+// const notify =  new Notifier({ location: 'deck.gl' })
+const MAPBOX_ACCESS_TOKEN = "please provide"
 
 if (!MAPBOX_ACCESS_TOKEN) {
-    notify.error('Please provide a MAPNOX_ACCESS_TOKEN')
+    toastNotifications.addDanger('DeckGL plugin: Please provide a MAPNOX_ACCESS_TOKEN')
 }
 
 const initialViewState = {

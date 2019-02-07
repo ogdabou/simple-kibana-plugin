@@ -12,12 +12,12 @@ const DeckGlVisType = (Private) => {
     return VisFactory.createReactVisualization({
         name: 'Deck.gl',
         title: 'Deck.gl',
-        icon: 'fa fa-wrench',
+        icon: 'visControls',
         description: 'Cool new chart',
         category: CATEGORY.OTHER,
         requiresUpdateStatus: [Status.AGGS, Status.PARAMS, Status.RESIZE, Status.UI_STATE],
         requestHandler: 'courier',
-        responseHandler: 'tabify',
+        responseHandler: 'none',
         visConfig: {
             component: DeckGlComponent,
             defaults: {

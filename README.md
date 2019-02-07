@@ -9,18 +9,49 @@
 ## development
 
 
-### Setup
+### Setup your environment
 
 - Mapbox token: Put your mapbox token in `public/vis.js`
 - Have the following project structure
+
+**Directory structure & clone kibana**
+
 ```bash
+
+mkdir kibana-work
+cd kibana-work
+git clone git clone --depth 1 --branch v6.5.4 git@github.com:elastic/kibana.git
+
+tree 
 .         
 ├── kibana             
 └── kibana-extra
-    └── deck_gl
+    └── deck_gl (this plugin repository)
 ```
 
+**Install YARN**
+
+https://yarnpkg.com/lang/en/docs/install/#debian-stable
+
+**Use NodeJS v8.14.0**
+
+```bash
+nvm install v8.14.0
+nvm use v8.14.0
+```
+
+
 ### Start coding
+
+```bash
+cd kibana-work/kibana-extra/simple-kibana-plugin
+
+# Starts ES locally
+npm run-script dev
+
+yarn start --oss
+yarn kbn bootstrap
+```
 
 See the [kibana contributing guide](https://github.com/elastic/kibana/blob/master/CONTRIBUTING.md) for instructions setting up your development environment. Once you have completed that, use the following yarn scripts.
 
@@ -51,3 +82,12 @@ See the [kibana contributing guide](https://github.com/elastic/kibana/blob/maste
     Run the server tests using mocha.
 
 For more information about any of these commands run `yarn ${task} --help`. For a full list of tasks checkout the `package.json` file, or run `yarn run`.
+
+### Known issues
+
+Look at this
+
+```bash
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+echo vm.max_map_count=262144 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+```

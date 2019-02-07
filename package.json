@@ -4,7 +4,7 @@
   "description": "An awesome Kibana plugin",
   "main": "index.js",
   "kibana": {
-    "version": "6.4.0",
+    "version": "6.5.4",
     "templateVersion": "1.0.0"
   },
   "scripts": {
@@ -14,7 +14,8 @@
     "start": "plugin-helpers start",
     "test:server": "plugin-helpers test:server",
     "test:browser": "plugin-helpers test:browser",
-    "build": "plugin-helpers build"
+    "build": "plugin-helpers build",
+    "dev": "docker-compose -f dev/docker-compose.yml up"
   },
   "devDependencies": {
     "@elastic/eslint-config-kibana": "link:../../kibana/packages/eslint-config-kibana",
